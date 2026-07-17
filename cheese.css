@@ -1,0 +1,183 @@
+/* cheese.css */
+/* repo: https://github.com/YOUR-USERNAME/cheese-guide  (put your real link here) */
+
+/* pull in my variables from the other file.
+   note: a <link> tag is better in real projects because @import
+   loads slower (it waits instead of downloading at the same time). */
+@import url("variables.css");
+
+
+/* reset - clear default margins on everything */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* set the font, text color, and line spacing once here.
+   everything inside body inherits these. */
+body {
+    font-family: var(--font-body);
+    color: var(--dark);
+    line-height: 1.6;
+
+    background: var(--cream);
+    font-size: 1rem;      /* rem = based on the page's base size */
+
+    width: 90%;           /* % so it shrinks/grows with the window */
+    max-width: 700px;
+    margin: 0 auto;
+    padding: var(--gap);
+}
+
+/* buttons and inputs don't inherit the font, so set it again */
+button,
+input {
+    font-family: var(--font-body);
+    color: var(--dark);
+}
+
+
+/* headings */
+h1 {
+    color: var(--orange);
+    font-size: 2rem;      /* rem again */
+}
+
+h2 {
+    color: var(--orange);
+    border-bottom: 3px solid var(--yellow);
+    margin-top: var(--gap);
+}
+
+
+/* the byline: a p inside the header (descendant) */
+header p {
+    color: var(--orange);
+    font-style: italic;
+}
+
+
+/* only the intro paragraph - the p that is a direct child of article (child) */
+article > p {
+    font-size: 1.1rem;
+    border-left: 4px solid var(--yellow);
+    padding-left: var(--gap);
+}
+
+
+/* the Latin words - by their lang attribute */
+span[lang] {
+    font-style: italic;
+}
+
+/* the Latin words - by their class */
+.latin {
+    background: var(--yellow);
+    padding: 0 0.2em;     /* em so the highlight matches the word size */
+}
+
+
+/* definition list */
+dt {
+    font-weight: bold;
+    color: var(--orange);
+    margin-top: var(--gap);
+}
+
+/* a dd right after a dt (adjacent sibling) */
+dt + dd {
+    margin-bottom: var(--gap);
+    padding-left: var(--gap);
+}
+
+
+/* the warning paragraph - by its id */
+#warning {
+    background: var(--yellow);
+    border: 2px solid var(--orange);
+    padding: var(--gap);
+    font-weight: bold;
+}
+
+/* add a warning symbol that isn't in the html */
+#warning::before {
+    content: "⚠ ";
+}
+
+
+/* the quote */
+blockquote {
+    border-left: 4px solid var(--orange);
+    padding: 1em 1.5em;   /* em so padding grows with the quote text */
+    font-style: italic;
+}
+
+blockquote footer {
+    font-style: normal;
+    color: var(--orange);
+}
+
+
+/* links */
+a {
+    color: var(--orange);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* keep a visible outline when focused (don't hide it) */
+a:focus,
+input:focus,
+button:focus {
+    outline: 2px solid var(--orange);
+    outline-offset: 2px;
+}
+
+
+/* form */
+fieldset {
+    border: 2px solid var(--yellow);
+    padding: var(--gap);
+    margin-bottom: var(--gap);
+}
+
+fieldset label {
+    margin-right: 1em;
+}
+
+input[type="text"] {
+    border: 1px solid var(--orange);
+    padding: 0.3em;
+}
+
+button {
+    background: var(--orange);
+    color: var(--cream);
+    border: none;
+    padding: 0.5em 1em;
+    margin-top: var(--gap);
+}
+
+button:hover {
+    background: var(--yellow);
+    color: var(--dark);
+}
+
+/* when a checkbox is checked, color its label (checked + sibling label) */
+input[type="checkbox"]:checked + label {
+    color: var(--orange);
+    font-weight: bold;
+}
+
+
+/* footer */
+footer {
+    margin-top: var(--gap);
+    border-top: 3px solid var(--orange);
+    padding-top: var(--gap);
+    text-align: center;
+}

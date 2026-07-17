@@ -1,0 +1,15 @@
+/* variables.css: my colors, font, and spacing */
+
+:root {
+    /* orange and yellow theme */
+    --orange: rgb(200, 100, 30);
+    --yellow: rgb(245, 185, 50);
+    --dark:   rgb(60, 40, 20);
+    --cream:  rgb(255, 245, 225);
+
+    /* font */
+    --font-body: Arial, sans-serif;
+
+    /* spacing */
+    --gap: 16px;
+}
