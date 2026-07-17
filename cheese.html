@@ -3,25 +3,31 @@
     <head>
         <meta charset="UTF-8">
         <title>A Short Guide to Cheese</title>
+
+        <!-- Link the external stylesheet -->
+        <link rel="stylesheet" href="cheese.css">
+        <style>
+            h1 {
+                color: rgb(140, 60, 20);
+            }
+        </style>
     </head>
     <body>
         <header>
             <h1>A Short Guide to Cheese</h1>
-            <!-- byline lives inside header-->
-            <p>by The CSE Cheese Society.
+            <p>by <a href="#">The CSE Cheese Society</a>.
                 Last updated <time datetime="2026-01">January 2026</time>.</p>
         </header>
 
         <main>
             <article>
-                <!-- Opening paragraph is a DIRECT child of <article>, not nested in a section-->
+                <!-- Opening paragraph is a DIRECT child of <article> -->
                 <p>
                     Cheese is one of humanity's oldest prepared foods.
                     People have made it for at least 7,000 years, long before written history.
                     At its core, cheese is simple: milk, salt, cultures, and rennet. Time and technique do the rest.
                 </p>
 
-                <!-- Each h2 topic gets its own <section> -->
                 <section>
                     <h2>What Is Cheese, Really?</h2>
                     <p>
@@ -40,7 +46,6 @@
 
                 <section>
                     <h2>Famous Families of Cheese</h2>
-                    <!-- Four families = four term/description pairs = a definition list -->
                     <dl>
                         <dt>Fresh cheeses</dt>
                         <dd>Young and mild. They include mozzarella, ricotta, and chevre. Eat these within days.</dd>
@@ -58,13 +63,11 @@
 
                 <section>
                     <h2>A Word of Caution</h2>
-                    <!-- id on the warning paragraph, for a targeted CSS rule in Part 2 -->
                     <p id="warning">
                         Warning: The American product known as "processed cheese food" is,
                         at best, distantly related to cheese. Read the label.
                     </p>
 
-                    <!-- Standalone, attributed quotation: blockquote with footer inside it -->
                     <blockquote>
                         <p>Cheese is milk's leap toward immortality.</p>
                         <footer>&mdash; Clifton Fadiman</footer>
@@ -76,9 +79,14 @@
                     <form>
                         <fieldset>
                             <legend>Which of these have you tasted?</legend>
-                            <label><input type="checkbox" name="tasted" value="brie"> Brie</label>
-                            <label><input type="checkbox" name="tasted" value="roquefort"> Roquefort</label>
-                            <label><input type="checkbox" name="tasted" value="aged-gouda"> Aged Gouda</label>
+                            <input type="checkbox" id="brie" name="tasted" value="brie">
+                            <label for="brie">Brie</label>
+
+                            <input type="checkbox" id="roquefort" name="tasted" value="roquefort">
+                            <label for="roquefort">Roquefort</label>
+
+                            <input type="checkbox" id="aged-gouda" name="tasted" value="aged-gouda">
+                            <label for="aged-gouda">Aged Gouda</label>
                         </fieldset>
 
                         <label for="favorite">Tell us your favorite cheese and we will add it to the guide.</label>
