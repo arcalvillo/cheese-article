@@ -1,36 +1,31 @@
 /* cheese.css */
 /* repo: https://github.com/arcalvillo/cheese-article */
+/* deployed: https://cheesearticle.netlify.app */
 
-/* pull in my variables from the other file.
-   note: a <link> tag is better in real projects because @import
-   loads slower (it waits instead of downloading at the same time). */
+/* pull in my variables from the other file.*/
 @import url("variables.css");
-
-
-/* reset - clear default margins on everything */
+/* clear default margins on everything */
 * {
     margin: 0;
     box-sizing: border-box;
 }
-
-
-/* set the font, text color, and line spacing once here.
-   everything inside body inherits these. */
+/* everything inside body inherits font. */
 body {
     font-family: var(--font-body);
     color: var(--dark);
     line-height: 1.6;
 
     background: var(--cream);
-    font-size: 1rem;      /* rem = based on the page's base size */
-
-    width: 90%;           /* % so it shrinks/grows with the window */
+    font-size: 1rem;      
+   /*rem based on the page's base size */
+    /*it shrinks/grows with the window */
+    width: 90%;          
     max-width: 700px;
     margin: 0 auto;
     padding: var(--gap);
 }
 
-/* buttons and inputs don't inherit the font, so set it again */
+/* buttons & inputs don't inherit the font so set it again */
 button,
 input {
     font-family: var(--font-body);
