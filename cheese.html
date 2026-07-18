@@ -8,6 +8,10 @@
         <link rel="stylesheet" href="cheese.css">
         <style>
             h1 {
+                /* This h1 rule and the one in cheese.css are both just one element selector,
+                   so their specificity ties. When specificity ties, the rule that comes last
+                   wins. This style block is read after the linked stylesheet, so this color
+                   overrides the one in cheese.css. */
                 color: rgb(140, 60, 20);
             }
         </style>
